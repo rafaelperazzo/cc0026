@@ -1,0 +1,2 @@
+gcc -o /home/perazzo/programa $1
+/home/perazzo/./programa
