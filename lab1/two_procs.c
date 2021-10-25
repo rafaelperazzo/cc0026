@@ -14,7 +14,7 @@ int main(void) {
 		var++;
 	}
 	else
-		sleep(15);		/* ***parent***; try to guarantee that child ends first*/
+		sleep(2);		/* ***parent***; try to guarantee that child ends first*/
 	printf("pid = %d, ppid = %d, glob = %d, var = %d\n", getpid(), getppid(), glob, var);
 	return 0;
 }
