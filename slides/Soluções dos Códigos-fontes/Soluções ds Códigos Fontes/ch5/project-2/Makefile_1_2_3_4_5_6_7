@@ -1,0 +1,23 @@
+# To run, enter
+# make all
+
+all: diningphilosophers
+
+diningphilosophers: main.o dining.o eating.o thinking.o philosopher.o
+	gcc -lpthread -o diningphilosophers main.o dining.o thinking.o eating.o philosopher.o
+
+main.o: main.c dp.h
+	gcc -lpthread -c main.c
+
+dining.o: dining.c dp.h
+	gcc -lpthread -c dining.c
+
+philosopher.o: philosopher.c dp.h
+	gcc -lpthread -c philosopher.c
+
+eating.o: eating.c
+	gcc -lpthread -c eating.c
+
+thinking.o: thinking.c
+	gcc -lpthread -c thinking.c
+

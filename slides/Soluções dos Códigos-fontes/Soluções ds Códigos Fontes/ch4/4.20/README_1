@@ -1,0 +1,14 @@
+O Makefile que vem com esse problema cria todos os executáveis necessários 
+
+Simplesmente insira
+
+	make all
+
+e então execute o script de teste inserindo
+
+	./testpid
+
+Você pode ver a mensagem PID ALREADY IN USE. No entanto, se isso ocorrer
+talvez seja devido ao fato dos alunos não terem criado uma técnica para a alocação de pids
+com segurança de threads. O Capítulo 5 contém um exercício que cria
+um gerenciador de pid com segurança de threads.

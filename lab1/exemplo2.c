@@ -11,11 +11,12 @@ int main(void) {
    else if (pid==0) { //Processo filho
         printf("[FILHO]: PID %d - PPID: %d\n",getpid(),getppid());
         printf("Vou dormir um pouco...\n");
-        sleep(60);
+        sleep(5);
    }
    else { //Processo pai
         printf("[PAI]: PID %d - PPID: %d\n",getpid(),getppid());
         wait(NULL);
+        sleep(10);
    }
    return 0;
 }

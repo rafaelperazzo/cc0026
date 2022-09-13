@@ -33,7 +33,8 @@ int main(void) {
         sleep(3); /* pause for 3 secs */
         printf("\nPARENT: sending SIGQUIT\n\n");
         kill(pid, SIGQUIT);
-        sleep(5);
+        printf("Encerrei processo filho\n");
+        sleep(60);
 
    }
    return 0;

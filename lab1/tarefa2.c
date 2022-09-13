@@ -27,7 +27,7 @@ int main(void) {
             printf("[PAI]: Filho (%d) suspendeu devido a um sinal: %d\n",pid,WSTOPSIG(status));
         }
         else {
-            printf("[PAI]: Filho (%d) nao suspendeu devido a um sinal SIGSTOP\n");
+            printf("[PAI]: Filho (%d) nao suspendeu devido a um sinal SIGSTOP\n",pid);
         }
    }
    return 0;

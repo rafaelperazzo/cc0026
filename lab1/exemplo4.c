@@ -10,7 +10,7 @@ int main(void) {
    else if (pid==0) { //Processo filho
         printf("Executando um programa externo...\n");
         printf("[FILHO]: PID %d - PPID: %d\n",getpid(),getppid());
-        execlp("/usr/bin/ls","ls","-la",(char*) NULL);
+        execlp("/bin/ls","ls","-la",(char*) NULL);
         printf("Finalizando a execucao...\n");
    }
    else { //Processo pai

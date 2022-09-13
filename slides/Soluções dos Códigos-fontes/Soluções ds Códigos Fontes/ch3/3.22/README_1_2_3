@@ -1,0 +1,13 @@
+Para compilar em sistemas Linux, insira
+
+	gcc -lrt -o producer producer.c
+
+	gcc -lrt -o consumer consumer.c
+
+Primeiro execute o produtor que gera a sequência na memória compartilhada:
+
+	./producer
+
+E depois execute o consumidor que exibe a sequência:
+
+	./consumer

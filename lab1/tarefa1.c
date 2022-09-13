@@ -21,7 +21,7 @@ int main(void) {
             printf("[PAI]: Filho (%d) terminou devido a um sinal: %d\n",pid,WTERMSIG(status));
         }
         else {
-            printf("[PAI]: Filho (%d) nao terminou devido a um sinal\n");
+            printf("[PAI]: Filho (%d) nao terminou devido a um sinal\n",pid);
         }
    }
    return 0;
