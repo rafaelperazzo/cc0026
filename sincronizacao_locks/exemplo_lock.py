@@ -4,12 +4,12 @@ deposit = 100
 # Function to add profit to the deposit
 def add_profit():
     global deposit
-    for i in range(100000):
+    for i in range(1000000):
         deposit = deposit + 10
 # Function to deduct money from the deposit
 def pay_bill():
     global deposit
-    for i in range(100000):
+    for i in range(1000000):
         deposit = deposit - 10
 # Creating threads
 thread1 = threading.Thread(target = add_profit, args = ())
