@@ -2,12 +2,18 @@ import socket
 import threading
 
 def conexao_cliente(client,address):
-    data = client.recv(2048)
-    print(address)
-    '''
-    PROTOCOLO
-    '''
-    client.sendall(data)
+    
+    while (True):    
+        data = client.recv(2048)
+        '''
+        PROTOCOLO
+        '''
+        mensagem = data.decode()
+        if (mensagem!='0'):
+            client.sendall(data)
+        else:
+            client.sendall('0'.encode())
+            break
     #Fechando o socket
     client.close()
 
@@ -25,7 +31,6 @@ sock.listen(1)
 #Iniciando protocolo
 
 while True:
-    print ("Esperando mensagem do cliente")
     client, address = sock.accept()
     conexao = threading.Thread(target=conexao_cliente,args=(client,address,))
     conexao.start()
